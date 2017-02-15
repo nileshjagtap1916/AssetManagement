@@ -6,10 +6,10 @@ import (
 	"fmt"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/op/go-logging"
+	//"github.com/op/go-logging"
 )
 
-var myLogger = logging.MustGetLogger("asset_mgm")
+//var myLogger = logging.MustGetLogger("asset_mgm")
 
 // AssetManagementChaincode example simple Asset Management Chaincode implementation
 // with access control enforcement at chaincode level.
@@ -40,7 +40,7 @@ type AssetManagementChaincode struct {
 
 // Init initialization
 func (t *AssetManagementChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
-	myLogger.Info("[AssetManagementChaincode] Init")
+	//myLogger.Info("[AssetManagementChaincode] Init")
 	if len(args) != 0 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 0")
 	}

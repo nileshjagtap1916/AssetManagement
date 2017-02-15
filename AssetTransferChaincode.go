@@ -56,7 +56,7 @@ func (t *AssetManagementChaincode) Init(stub shim.ChaincodeStubInterface, functi
 
 	// Set the role of the users that are allowed to assign assets
 	// The metadata will contain the role of the users that are allowed to assign assets
-	assignerRole, err := stub.GetCallerMetadata()
+	assignerRole, err := stub.GetCallerCertificate()
 	fmt.Printf("Assiger role is %v\n", string(assignerRole))
 
 	if err != nil {

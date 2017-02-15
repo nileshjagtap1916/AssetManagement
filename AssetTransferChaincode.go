@@ -63,9 +63,9 @@ func (t *AssetManagementChaincode) Init(stub shim.ChaincodeStubInterface, functi
 		return nil, fmt.Errorf("Failed getting metadata, [%v]", err)
 	}
 
-	if len(assignerRole) == 0 {
+	/*if len(assignerRole) == 0 {
 		return nil, errors.New("Invalid assigner role. Empty.")
-	}
+	}*/
 
 	stub.PutState("assignerRole", assignerRole)
 
